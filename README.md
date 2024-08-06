@@ -1,16 +1,32 @@
-# Stary-cat-image-generation-diffusion-model
-This repository contains a fine-tuned Diffusion model trained specifically on stray cat images. The model is deployed on Hugging Face Spaces using Gradio, allowing users to generate and view images of stray cats.
+# Stray Cat Image Generator
+This project leverages the power of the diffusers library and the gradio interface to generate images based on text prompts. The model used is fine-tuned on stray cat images, enabling the generation of high-quality images of stray cats based on user input.
 
-## Features
-
-* **Fine-Tuned Model:** The Diffusion model has been fine-tuned on a dataset of stray cat images.
-* **Web Interface:** A user-friendly web interface powered by Gradio for easy interaction with the model.
-* **Deployment:** Hosted on Hugging Face Spaces for seamless accessibility.
-## Model Details
-The model uses the Diffusion technique to generate high-quality images. It has been fine-tuned on a diverse dataset of stray cats to ensure that the generated images capture the unique characteristics of stray cats.
-### Model Url:
-
+## Installation
+1. To run this project, you will need to install the required Python libraries. You can do this using pip:
+```python
+   !pip install gradio torch diffusers
+```
+2. To install requirements.txt file
+```python
+    !pip insatall -r requirements.txt
+```
 ## Usage
-* **Input:** Provide input parameters (e.g., random seed) through the Gradio interface.
-* **Generate:** Click on the "Generate" button to create an image of a stray cat.
-* **View:** The generated image will be displayed on the interface.
+The code defines a simple web interface where users can input a text prompt to generate an image of a stray cat.
+## Import libraries
+```python
+import gradio as gr
+import torch
+from diffusers import DiffusionPipeline
+```
+## Load pipeline
+```python
+pipeline = DiffusionPipeline.from_pretrained("ahmadmac/stray-cat")
+```
+## Model
+The model used in this project is fine-tuned on images of stray cats. It is capable of generating realistic and detailed images of stray cats based on descriptive text prompts.
+[Model link](https://huggingface.co/ahmadmac/stray-cat)
+
+## Example
+To generate an image of a stray cat, enter a prompt such as "A stray cat sitting on a sidewalk" and click the "Generate Image" button. The generated image will be displayed in the interface.
+## [Hugging Face Space Link](https://huggingface.co/spaces/ahmadmac/stray-cat-image-generation)
+
