@@ -1,4 +1,4 @@
-# Stray Cat Image Generator
+# Image Generator
 This project leverages the power of the diffusers library and the gradio interface to generate images based on text prompts. The model used is fine-tuned on stray cat images, enabling the generation of high-quality images of stray cats based on user input.
 
 ## Installation
