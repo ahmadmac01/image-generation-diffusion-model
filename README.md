@@ -1,5 +1,5 @@
 # Image Generator
-This project leverages the power of the diffusers library and the gradio interface to generate images based on text prompts. The model used is fine-tuned on stray cat images, enabling the generation of high-quality images of stray cats based on user input.
+This project uses a fine-tuned diffusion model to generate images based on textual prompts. The model has been fine-tuned on my 250  images to produce more relevant and personalized results. The image generation process is managed using the diffusers library, and a user interface is built with Gradio.
 
 ## Installation
 1. To run this project, you will need to install the required Python libraries. You can do this using pip:
@@ -11,7 +11,7 @@ This project leverages the power of the diffusers library and the gradio interfa
     !pip insatall -r requirements.txt
 ```
 ## Usage
-The code defines a simple web interface where users can input a text prompt to generate an image of a stray cat.
+The code defines a simple web interface where users can input a text prompt to generate an image.
 ## Import libraries
 ```python
 import gradio as gr
@@ -20,13 +20,13 @@ from diffusers import DiffusionPipeline
 ```
 ## Load pipeline
 ```python
-pipeline = DiffusionPipeline.from_pretrained("ahmadmac/stray-cat")
+pipeline = DiffusionPipeline.from_pretrained("ahmadmac/images_Generation")
 ```
 ## Model
-The model used in this project is fine-tuned on images of stray cats. It is capable of generating realistic and detailed images of stray cats based on descriptive text prompts.
-[Model link](https://huggingface.co/ahmadmac/stray-cat)
+The model used for image generation has been fine-tuned on 250 images. This fine-tuning process enhances the model's ability to generate images that are more aligned with specific needs and preferences based on the provided prompts.
+[Model link](https://huggingface.co/ahmadmac/Images_Generation)
 
 ## Example
-To generate an image of a stray cat, enter a prompt such as "A stray cat sitting on a sidewalk" and click the "Generate Image" button. The generated image will be displayed in the interface.
-## [Hugging Face Space Link](https://huggingface.co/spaces/ahmadmac/stray-cat-image-generation)
+To generate an image, enter a prompt and click the "Generate Image" button. The generated image will be displayed in the interface.
+## [Hugging Face Space Link](https://huggingface.co/spaces/ahmadmac/Images_Generator)
 
