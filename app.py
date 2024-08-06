@@ -2,7 +2,7 @@ import gradio as gr
 import torch
 from diffusers import DiffusionPipeline
 
-pipeline = DiffusionPipeline.from_pretrained("ahmadmac/stray-cat")
+pipeline = DiffusionPipeline.from_pretrained("ahmadmac/images_Generation")
 
 def generate_image(prompt, output_file="generated_image.png"):
   with torch.autocast("cpu"):  
